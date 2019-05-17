@@ -8,8 +8,9 @@ import os
 import re
 import subprocess
 import sys
+sys.dont_write_bytecode = True
 
-from core.convert import stdoutencode
+from .convert import stdoutencode
 
 if subprocess._mswindows:
     import ctypes

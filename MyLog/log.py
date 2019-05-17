@@ -6,7 +6,7 @@ LOGGER = logging.getLogger(PATH)
 
 LOGGER_HANDLER = None
 try:
-    from thirdparty.ansistrm.ansistrm import ColorizingStreamHandler
+    from .ansistrm.ansistrm import ColorizingStreamHandler
 
     disableColor = False
 
@@ -23,6 +23,7 @@ try:
         LOGGER_HANDLER = ColorizingStreamHandler(sys.stdout)
 except ImportError as e:
     print(e)
+    FILE_HANDLER = logging.FileHandler(PATH)
     LOGGER_HANDLER = logging.StreamHandler(sys.stdout)
 
 FORMATTER1 = logging.Formatter(
