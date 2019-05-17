@@ -1,6 +1,6 @@
 <h2 align="center">MyLog</h2>
 
-Mylog is a Python Color Log inspired by sqlmap
+Mylog is a Python Color Log inspired by sqlmap.
 
 ## Usage: 
  
